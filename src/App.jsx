@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 import { WiHumidity, WiStrongWind } from "react-icons/wi";
 import axios from "axios";
 
@@ -54,10 +53,11 @@ function App() {
           className="flex-1 outline-none px-2 text-base text-black"
           onChange={(e) => setSearch(e.target.value)}
         />
-        <FaSearch
-          className="text-gray-700 cursor-pointer text-xl"
-          onClick={fetchWeather}
-        />
+        <button
+          className="w-16 py-2 px-2 bg-black text-white  rounded-full text-sm"
+          onClick={fetchWeather}>
+          Search
+        </button>
       </div>
 
       {/* Weather Image */}
